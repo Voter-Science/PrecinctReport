@@ -1,10 +1,10 @@
 ﻿{
     // ID must be unique on the gallery
-    "Id": "PluginTemplate",
-    "Name": "An empty plugin",
+    "Id": "PrecinctReport",
+    "Name": "PrecinctReport",
     "Author" :  "Voter-Science",
     "Website" :  "https://github.com/Voter-Science/TRC-API-Samples",
-    "Description": "An empty plugin that just gets the initial login and shows basic sheet properties.",        
+    "Description": "Provide per-precinct breakdown of different metrics.",        
     "Version": "1.0.0", // User SemVer
-    "Tags": [ "demo"  ]
+    "Tags": [ "reports", "precincts"  ]
 }

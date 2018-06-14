@@ -48,7 +48,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Basic TRC plugin</title>
+    <title>Precinct Reports</title>
 </head>
 <body>
     <div id="_loadingmsg">
@@ -60,31 +60,40 @@
         <button onclick="clearError()">Clear error</button>
     </span>
     <div id="_mainbody"  style="display:none">
+        <h2>Provide basic precinct level reporting</h2>
         <p>
-            This is an empty TRC plugin that demonstrates calling PluginMain().
+            This is a report split out by precinct. 
         </p>
-        <p>
-            See <a href="https://github.com/Voter-Science/TrcLibNpm">https://github.com/Voter-Science/TrcLibNpm</a> for more information on writing plugions.
-        </p>
-
-        <h2>Basic sheet information:</h2>
         <table>
-            <tr><td>Name:</td><td><div id="SheetName"></div></td></tr>
-            <tr><td>Parent:</td><td><div id="ParentSheetName"></div></td></tr>
             <tr><td>Version:</td><td><div id="SheetVer"></div></td></tr>
             <tr><td>Total Rows:</td><td><div id="RowCount"></div></td></tr>
-            <tr><td>Last refreshed:</td><td><div id="LastRefreshed"></div></td></tr>
         </table> 
-        <div id="locInfo">
-        </div>
+        
+        <h3>Description of table columns</h3>
+        <p>            
+            <table>
+                <tr><td>Names</td><td>Name of precinct</td></tr>
+                <tr><td>Count</td><td># of voters in this precinct</tr>
+                <tr><td>HouseholdCount</td><td># of unique households in this precinct</td></tr>                
+                <tr><td>GOPCount</td><td># of people with gop partyId (1,2)</td></tr>                
+                <tr><td>DemCoount</td><td># of people with dem partyId (4,5)</td></tr>                
+                <tr><td>GOPPercent</td><td> (GOPCount) / (GOPCount + DemCount)</td></tr>                
+                <tr><td>ContactCount</td><td># of people contacted (ResultOfContact is not blank)</td></tr>                
+                <tr><td>ContactHouseholdCount</td><td># of households contacted</td></tr>                
+                <tr><td>Targets</td><td># of targets in this precinct (see <a href="https://blog.voter-science.com/canvass-targeting/">setting targets</a> for details)</td></tr>                
+            </table>
 
-        <button onclick="_plugin.onClickRefresh()">Refresh!</button>
+        </p>
+        
+        <h3>Precinct report</h3>
+        <p>You can download as a spreadsheet to sort and pivot this data:</p>
+        <div id="download"></div>
 
-        <button onclick="_plugin.onGetSheetContents()">GetSheetContents!</button>
-        <div id="contents">
+        <p>Totals:</p>
+        <div id="totals"></div>
 
-        <p>Congratulations! You made your first TRC plugin!</p>
-        </div>
+        <p>Here's the per-precinct listing:</p>
+        <div id="contents"></div>
     </div>
 </body>
 </html>
