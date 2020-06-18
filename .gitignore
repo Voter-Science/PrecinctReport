@@ -1,7 +1,3 @@
-/node_modules
-
-*.js
-*.js.map
-*.log
-
-typings
+node_modules
+bundle.js
+bundle.js.map
