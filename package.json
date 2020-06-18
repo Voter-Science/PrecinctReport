@@ -1,6 +1,6 @@
 {
-  "name": "trc.sampleplugin",
-  "version": "3.0.0",
+  "name": "precinct-report",
+  "version": "4.0.0",
   "description": "sample plugin for trc",
   "main": "index.js",
   "scripts": {
@@ -24,9 +24,5 @@
     "source-map-loader": "^0.2.4",
     "trc.runplugin": "^1.4.4",
     "typescript": "^3.9.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Voter-Science/TrcPluginTemplate.git"
   }
 }
