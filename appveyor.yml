@@ -1,14 +1,19 @@
 # Test against the latest version of this Node.js version
 environment:
-  nodejs_version: "6"
+  nodejs_version: "12"
+
+cache:
+  - '%APPDATA%\npm-cache'               # npm cache
 
 # Install scripts. (runs after repo cloning)
 install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
+  - npm install -g webpack
+  - npm install -g webpack-cli
   - npm install
-  
+
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
@@ -18,7 +23,7 @@ test_script:
   #- npm test
 
 artifacts:
-  - path: public
+  - path: dist
     name: TrcDeploy
 
 # Don't actually build.

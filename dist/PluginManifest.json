@@ -1,0 +1,9 @@
+﻿{
+  "Id": "PrecinctReport",
+  "Name": "PrecinctReport",
+  "Author": "Voter-Science",
+  "Website": "https://github.com/Voter-Science/TRC-API-Samples",
+  "Description": "Provide per-precinct breakdown of different metrics.",
+  "Version": "1.0.0",
+  "Tags": ["reports", "precincts"]
+}
